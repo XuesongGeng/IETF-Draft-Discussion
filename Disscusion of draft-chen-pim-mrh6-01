@@ -1,8 +1,9 @@
 Question 1. What is the meaning of "B flag"?
 It is easy to understand what has been enhanced from figure 3 to figure 4. But it is hard to get the meaning of the encapsulation
 showed in figure 5, which is significantly compressed and the structure of segment list can hardly be recognized any more. 
-
+[HC]: Slides 6 and 7 presented in IETF 113 show some details about B flag. 
 For example: In Page 7, it is mentioned that 
 "The B flag added for a link indicates whether the link bits+ are used to represent the link numbers and other link related 
 information such as whether links' remote end nodes (i.e., next hops) are leaves. "
 Could you please give more clear difinition of "link bits+ " and also more explanation for "P field" and "S-Bits"?
+[HC]: Page 8 of the draft contains the definitions of these fields. Can you check if they are enough?

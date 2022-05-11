@@ -7,3 +7,13 @@ For example: In Page 7, it is mentioned that
 information such as whether links' remote end nodes (i.e., next hops) are leaves. "
 Could you please give more clear difinition of "link bits+ " and also more explanation for "P field" and "S-Bits"?
 [HC]: Page 8 of the draft contains the definitions of these fields. Can you check if they are enough?
+
+[XS]:Thanks Huaimo, after playing back the presentation in IETF 113, I understand the idea better.
+If I understand this right, "link bits+" represents the outgoing port of the penultimate hop and the link connected the leaf will be set to 1, which 
+could save the "Link number" field for the leaves.  This is an efficient method to encode the multicast tree, which could save 
+the packet encapsulation overhead of the segment for the leaf nodes by introducing local bitstring. Similar idea could also be found 
+in section 6 of draft-geng-msr6-rlb-segment (https://datatracker.ietf.org/doc/draft-geng-msr6-rlb-segment/), the difference is that 
+draft-geng-msr6-rlb-segment defines a new type of SID for local bitstring and the whole tree is encoded by hierarchical segment list. 
+Here are 2 further questions based on this:
+1. Will introducing link number for the non-penultimate hop further save the overhead, compared to whole bitstring encoding?
+2. If only introducing local bistring for the penultimate hop, will there be any problem for alighment of each segment? 
